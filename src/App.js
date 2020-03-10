@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Car from './Car/Car'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends Component {
+  render() {
+    const divStyle = {
+      textAlign: 'center'
+    }
+
+    return (
+    <div style={divStyle}>
+      <h1>HELLO WORLD</h1>
+
+      <Car name={'Ford'} year={2018}>
+        <p style={{color: 'blue'}}>COLOR</p>
+      </Car>
+      <Car name='Audi' year={2016}> 
+        <p style={{color: 'red'}}>COLOR</p>
+      </Car>
+      <Car name={'Mazda'} year={2010} />
     </div>
-  );
+    );
+  }
 }
 
 export default App;
